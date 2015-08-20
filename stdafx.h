@@ -6,19 +6,23 @@
 #pragma once
 
 // Change these values to use different versions
-#define WINVER		0x0500
-#define _WIN32_WINNT	0x0501
-#define _WIN32_IE	0x0501
-#define _RICHEDIT_VER	0x0500
+#define WINVER		0x0600
+#define _WIN32_WINNT	0x0600
+#define _WIN32_IE	0x0600
+#define _RICHEDIT_VER	0x0600
 
 #include <atlbase.h>
+//#include <atlstr.h>
+//#include <atlutil.h>
+
 #include <atlapp.h>
 
 extern CAppModule _Module;
 
 #include <atlwin.h>
 
-#include <atlframe.h>
+#include <atlcrack.h>
+//#include <atlframe.h>
 #include <atlctrls.h>
 #include <atldlgs.h>
 
