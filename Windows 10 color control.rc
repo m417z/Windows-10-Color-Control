@@ -80,7 +80,7 @@ BEGIN
     GROUPBOX        "Accent color (taskbar, start menu)",IDC_STATIC,7,57,173,66
     CONTROL         "",IDC_ACCENT_COLOR,"Static",SS_LEFTNOWORDWRAP | SS_SUNKEN,14,70,105,20,WS_EX_STATICEDGE
     PUSHBUTTON      "Pick new color...",IDC_ACCENT_BTN,123,70,50,20,BS_MULTILINE
-    CONTROL         "Disable new auto-color accent algorithm\n(a.k.a. bright accent color palette)",IDC_ACCENT_NO_NEW_ALGO,
+    CONTROL         "Disable new auto-color accent algorithm\n(Use a brighter accent color palette)",IDC_ACCENT_NO_NEW_ALGO,
                     "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,98,143,16
     PUSHBUTTON      "About",ID_APP_ABOUT,7,134,50,14
     DEFPUSHBUTTON   "&Apply",IDOK,130,134,50,14
