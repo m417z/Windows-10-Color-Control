@@ -103,18 +103,34 @@ void CMainDlg::GetSettings()
 
 void CMainDlg::SetSettings()
 {
-	COLORREF similarToNewAccentColor = RGB(
-		GetRValue(m_accentColor) + (GetRValue(m_accentColor) > 0x7F ? -1 : 1),
-		GetGValue(m_accentColor), 
-		GetBValue(m_accentColor));
+	// The function calls below seem excessive, but that's a combination that
+	// works, unlike a more intuitive one.
+	// Without setting the DWM color before the Accent color,
+	// or without setting the Accent color twice with different colors,
+	// or without using a delay, the new accent algorithm doesn't apply.
+	// Windows 10 Anniversary Update resets the DWM color while setting the
+	// Accent color, therefore it's necessary to set it again.
 
+	// Set DWM color.
 	SetDwmColorizationColor(m_dwmColor);
+
+	// Set Accent algorithm and color.
 	SetAutoColorAccentAlgorithm(m_newAccentAlgo);
 
-	// This is necessary to apply the new accent algorithm.
+	// The similar color and the delay are necessary to apply the new accent algorithm.
+	COLORREF similarToNewAccentColor = RGB(
+		GetRValue(m_accentColor) + (GetRValue(m_accentColor) > 0x7F ? -1 : 1),
+		GetGValue(m_accentColor),
+		GetBValue(m_accentColor));
+
 	SetAccentColor(similarToNewAccentColor);
 	Sleep(100);
 
 	SetAccentColor(m_accentColor, !m_newAccentAlgo);
+
+	// Set DWM color again.
+	SetDwmColorizationColor(m_dwmColor);
+
+	// Reload the new settings.
 	GetSettings();
 }
