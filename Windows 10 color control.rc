@@ -64,7 +64,7 @@ CAPTION "About"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,52,104,50,14
-    CTEXT           "Windows 10 Color Control v1.2\n\nhttp://rammichael.com/",IDC_STATIC,25,57,104,32
+    CTEXT           "Windows 10 Color Control v1.3\n\nhttp://rammichael.com/",IDC_STATIC,25,57,104,32
     ICON            IDR_MAINFRAME,IDC_STATIC,67,26,21,20
     GROUPBOX        "",IDC_STATIC,7,7,141,88
 END
@@ -144,8 +144,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,2,0,0
- PRODUCTVERSION 1,2,0,0
+ FILEVERSION 1,3,0,0
+ PRODUCTVERSION 1,3,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -161,12 +161,12 @@ BEGIN
         BLOCK "040904B0"
         BEGIN
             VALUE "FileDescription", "Windows 10 Color Control"
-            VALUE "FileVersion", "1, 2, 0, 0"
+            VALUE "FileVersion", "1, 3, 0, 0"
             VALUE "InternalName", "Windows 10 Color Control"
             VALUE "LegalCopyright", "Copyright 2015"
             VALUE "OriginalFilename", "Windows 10 Color Control.exe"
             VALUE "ProductName", "Windows 10 Color Control"
-            VALUE "ProductVersion", "1, 2, 0, 0"
+            VALUE "ProductVersion", "1, 3, 0, 0"
         END
     END
     BLOCK "VarFileInfo"
